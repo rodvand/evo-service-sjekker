@@ -48,8 +48,7 @@ for key in result:
 if change:
     # Set the webhook URL and message payload
     webhook_url = os.environ.get('MATTERMOST_URL')
-    webhook_url = 'https://mattermost.rodvand.net/hooks/pmezdxc5s3ywdq3ite6gh6p5yw'
-    message_payload = {"channel": "@rodvand", "text": f"{output}"}
+    message_payload = {"channel": "sykkel", "text": f"{output}"}
 
     # Send the message using a POST request to the webhook URL
     response = requests.post(webhook_url, json=message_payload)
