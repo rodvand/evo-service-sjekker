@@ -4,11 +4,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+script_directory = os.path.dirname(os.path.abspath(__file__))
+print(script_directory)
+
 # Read the configuration from the YAML file
-with open("config.yaml", "r") as f:
+with open(f"{script_directory}/config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
-with open("result.yaml", "r") as f:
+with open(f"{script_directory}/result.yaml", "r") as f:
     result = yaml.safe_load(f)
 
 # Extract the list of URLs and class names from the configuration
