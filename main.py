@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
-print(script_directory)
 
 # Read the configuration from the YAML file
 with open(f"{script_directory}/config.yaml", "r") as f:
@@ -42,7 +41,7 @@ for url, place in zip(urls, places):
         change = True
 
     # Print the extracted text
-    print(f"Place: {place} Service date: {new_text}")
+    #print(f"Place: {place} Service date: {new_text}")
 
 output = ""
 for key in result:
