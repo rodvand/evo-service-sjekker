@@ -1,4 +1,4 @@
-import requests, os, yaml
+import requests, os, yaml, datetime
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
@@ -18,7 +18,7 @@ with open(f"{script_directory}/result.yaml", "r") as f:
 urls = config["urls"]
 places = config["places"]
 
-change = True
+change = False
 
 # Loop over the list of URLs and class names
 for url, place in zip(urls, places):
@@ -64,3 +64,5 @@ if change:
 
     with open(f"{script_directory}/result.yaml", "w") as f:
         yaml.safe_dump(result, f)
+
+print(datetime.datetime.now())
