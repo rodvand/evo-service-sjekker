@@ -62,5 +62,5 @@ if change:
     else:
         print(f"Error sending message: {response.text}")
 
-    with open("result.yaml", "w") as f:
+    with open(f"{script_directory}/result.yaml", "w") as f:
         yaml.safe_dump(result, f)
